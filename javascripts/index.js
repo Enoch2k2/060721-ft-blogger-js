@@ -9,7 +9,6 @@
 // { title: "Title 1", content: "Content 1", author: "Author1" },
 // { title: "Title 2", content: "Content 2", author: "Author2" },
 // { title: "Title 3", content: "Content 3", author: "Author1" }
-const blogs = [];
 
 const blogsDiv = () => document.getElementById('blogs');
 const form = () => document.getElementById('form');
@@ -30,18 +29,28 @@ const submitForm = event => {
     content: contentInput().value
   }
 
-  blogs.push(blog);
-  displayBlog(blog);
+  fetch('http://localhost:3000/blogs', {
+    method: "POST",
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify( blog )
+  })
+    .then(resp => resp.json())
+    .then(blog => displayBlog(blog))
+
 }
 
 const loadBlogs = () => {
-  // what do we want to do?
-  
-  // We want to iterate on our array of blogs
-  // iterate blogs, 
 
-  blogs.forEach(blog => displayBlog(blog)) //do something?
+  fetch('http://localhost:3000/blogs')
+    .then(resp => resp.json())
+    .then(blogs => blogs.forEach(blog => displayBlog(blog)))
+ 
 }
+
+
 
 const displayBlog = blog => {
   // blog: { title: "Title 1", content: "Content 1", author: "Author1" }
