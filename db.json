@@ -5,6 +5,30 @@
       "author": "Author 1",
       "content": "Content 1",
       "id": 1
+    },
+    {
+      "title": "A",
+      "author": "Couple",
+      "content": "Of These",
+      "id": 2
+    },
+    {
+      "title": "This is an amazing blog",
+      "author": "Yours truly",
+      "content": "This is great content about a rubber duck.",
+      "id": 3
+    },
+    {
+      "title": "For Example",
+      "author": "Bob the second",
+      "content": "Content i don't know.",
+      "id": 4
+    },
+    {
+      "title": "Can",
+      "author": "we",
+      "content": "still submit?",
+      "id": 5
     }
   ]
 }
