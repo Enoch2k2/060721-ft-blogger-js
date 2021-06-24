@@ -1,3 +1,16 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "title": "",
+      "author": "",
+      "content": "",
+      "id": 1
+    },
+    {
+      "title": "",
+      "author": "",
+      "content": "",
+      "id": 2
+    }
+  ]
 }
